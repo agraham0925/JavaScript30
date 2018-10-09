@@ -7,5 +7,7 @@ window.addEventListener('keydown', function(e){
 	if(!audio)return; //if key pressed doesn't have an audio element, stop function
 	audio.currentTime = 0; //rewind to start (allows you to press key multiple times quickly)
 	audio.play()
-	console.log(key)
+
+	//adds highlight border to key
+	key.classList.add('playing');
 })
