@@ -7,6 +7,12 @@ const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player__slider');
 
-// buidl out functions
-
+// build out functions
+function togglePlay() {
+    if(video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
 // hook up the event listeners
