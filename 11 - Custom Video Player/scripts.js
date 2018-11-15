@@ -33,6 +33,12 @@ function handleProgress() {
     const percent = (video.currentTime / video.duration) * 100;
     progressBar.style.flexBasis = `${percent}%`;
 }
+
+function scrub(e) {
+    console.log(e, " this is e")
+    const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+    video.currentTime = scrubTime;
+}
 // hook up the event listeners
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
@@ -43,3 +49,4 @@ toggle.addEventListener('click', togglePlay);
 
 skipButtons.forEach(button => button.addEventListener('click', skip));
 ranges.forEach(range => range.addEventListener('change', handleRangUpdate));
+progress.addEventListener('click', scrub);
