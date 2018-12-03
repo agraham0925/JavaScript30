@@ -58,12 +58,12 @@
       };
     }
 
-    const sliderImages = document.querySelectorAll('.slide-in');
-function checkSlide (e) {
-  console.log(e)
-}
+  const sliderImages = document.querySelectorAll('.slide-in');
+  function checkSlide (e) {
+    console.log(e)
+  }
 
-window.addEventListener('scroll', checkSlide);
+  window.addEventListener('scroll', debounce(checkSlide));
 
 
   </script>
