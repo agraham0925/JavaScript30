@@ -22,8 +22,11 @@
     const team = players;
 
     // You might think we can just do something like this:
+    team[3] = 'Lux';
 
     // however what happens when we update that array?
+    // NOTE: both players and team are updated! Why? If you update an array, it will always
+      // reference back. Not the case with the other variable types.
 
     // now here is the problem!
 
